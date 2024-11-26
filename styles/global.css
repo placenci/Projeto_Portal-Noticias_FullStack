@@ -3,6 +3,7 @@
    padding: 0;
    box-sizing: border-box;
 }
+
 :root{
    --brand-color-light:#60A5FA;
    --brand-color-dark:#1D4ED8;
@@ -21,6 +22,7 @@
 
 
 }
+
 body{
    font: var(--text);
    color: var(--text-color-primary);
@@ -33,18 +35,20 @@ a{
 a:hover{
    color: var(--brand-color-light);
 }
+
 h1, h2, h3{
    font: inherit;
+}
+
+img{
+   max-width: 100%;
 }
 .container {
    max-width: 1280px;
    padding-inline: 32px;
    margin-inline: auto;
 }
-/*Utility-First*/
-.grid {
-   display: grid;
-}
-.grid-flow-col {
-   grid-auto-flow: column;
+main {
+   margin-top: 40px;
+   
 }
