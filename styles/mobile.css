@@ -1,0 +1,108 @@
+/* Versão Mobile */
+@media (max-width: 768px) {
+  /* Ajustes globais */
+  body {
+      font: var(--text-sm);
+  }
+
+  .container {
+      padding-inline: 16px;
+  }
+
+  /* Header */
+  #primary {
+      grid-auto-flow: row;
+      text-align: center;
+      div:nth-child(2) {
+          margin-inline: 0;
+      }
+      div:nth-child(3) {
+          justify-self: center;
+      }
+  }
+
+  #secondary {
+      flex-wrap: wrap;
+      gap: 8px;
+      text-align: center;
+      padding-block: 16px;
+  }
+
+  /* Main Section */
+  main {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+          "featured"
+          "weekly"
+          "ai"
+          "aside";
+      row-gap: 32px;
+  }
+
+  #featured {
+      grid-area: featured;
+      .card img {
+          height: auto;
+          max-height: 300px;
+      }
+      figcaption {
+          padding: 16px;
+      }
+  }
+
+  #weekly > div {
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 16px;
+  }
+
+  #weekly img {
+      height: auto;
+      width: 100%;
+  }
+
+  #ai {
+      img {
+          width: 100px;
+          height: 100px;
+      }
+      article {
+          grid-template-columns: 1fr;
+      }
+  }
+
+  aside {
+      grid-area: aside;
+      text-align: center;
+  }
+
+  #more > div {
+      gap: 16px;
+      grid-template-columns: 1fr;
+  }
+
+  #more article {
+      grid-template-columns: auto;
+      text-align: left;
+      img {
+          margin-bottom: 8px;
+      }
+  }
+
+  #more img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: unset;
+  }
+
+  /* Utility Classes for Mobile */
+  .gap-16 {
+      gap: 12px;
+  }
+  .gap-32 {
+      gap: 24px;
+  }
+
+  h1, h2, h3 {
+      font-size: smaller;
+  }
+}
